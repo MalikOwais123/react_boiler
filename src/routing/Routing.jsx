@@ -13,10 +13,16 @@ const Routing = () => {
     // {
     //   path: "blog/create",
     //   element: <CreateBlog />,
-    // },
-    // {
-    //   path: "edit-blog/:id",
-    //   element: <EditBlog />,
+    //   children: [
+    //     {
+    //       path: "",
+    //       element: <CreateBlog />,
+    //     },
+    //     {
+    //       path: ":id",
+    //       element: <EditBlog />,
+    //     },
+    //   ],
     // },
     {
       path: "*",
