@@ -1,0 +1,20 @@
+.container {
+    display: grid;
+    padding: 60px 0px;
+  }
+  
+  .fixedGrid {
+    grid-template-columns: minmax(20px, 1fr) minmax(310px, 1200px) minmax(
+        20px,
+        1fr
+      );
+  }
+  
+  .flexGrid {
+    grid-template-columns: 0px minmax(310px, 1fr) 0px;
+  }
+  
+  .gridChild {
+    grid-column: 2/3;
+  }
+  

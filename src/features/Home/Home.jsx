@@ -1,15 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button/Button";
+import Container from "../../components/Container/Container";
 
 const Home = () => {
   return (
-    <div>
+    <Container>
       <h2>Welcome to Home Page</h2>
       <Link to={"/about"}>
-        <Button>About</Button>
+        <Button>GO TO ABOUT</Button>
       </Link>
-    </div>
+    </Container>
   );
 };
 
