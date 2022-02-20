@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import ButtonLoading from "../ButtonLoading/ButtonLoading";
 
 var fontWeightComputation = (weight) => {
   var value = 300;
@@ -25,43 +24,44 @@ var fontWeightComputation = (weight) => {
   return value;
 };
 
-const Paragraph = (props) => {
+const Header = (props) => {
   var {
-    children: content = "Paragraph",
-    fontSize = 16,
-    color = "#cce0ea",
+    children: content = "Heading",
     fontWeight = "regular",
     style = {},
     customClass = "",
-    marginBottom = "10",
-    lineHeight = "1.5",
+    variant = "h1",
+    fontSize,
+    color = "#cce0ea",
     ...restProps
   } = props;
   var fontWeightValue = fontWeightComputation(fontWeight);
+  var VariantComponent = `${variant}`;
   return (
-    <p
-      className={customClass}
-      style={{
-        fontSize: `${fontSize}px`,
-        color,
-        marginBottom: `${marginBottom}px`,
-        fontWeight: fontWeightValue,
-        lineHeight: `${lineHeight}`,
-        ...style,
-      }}
-      {...restProps}>
-      {content}
-    </p>
+    <div style={{ fontSize: "16px" }}>
+      <VariantComponent
+        className={customClass}
+        style={{
+          fontSize: fontSize && `${fontSize}px`,
+          color,
+          fontWeight: fontWeightValue,
+          ...style,
+        }}
+        {...restProps}>
+        {content}
+      </VariantComponent>
+    </div>
   );
 };
 
-Paragraph.propTypes = {
+Header.propTypes = {
   children: PropTypes.string,
   fontWeight: PropTypes.string,
   style: PropTypes.object,
   customClass: PropTypes.string,
+  variant: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6"]),
   fontSize: PropTypes.number,
   color: PropTypes.string,
 };
 
-export default Paragraph;
+export default Header;
