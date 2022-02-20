@@ -1,0 +1,55 @@
+.buttonContainer {
+  outline: none;
+  background: $darkColor;
+  padding: 8px 24px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  border-radius: 4px;
+  border: solid 1px transparent;
+  
+  p {
+    margin: 0;
+  }
+}
+// WHEN BUTTON IS LOADING
+.loading_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 28px;
+  transition: all 2000ms ease-in-out;
+  .loader {
+    opacity: 1;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 2px solid #3498db;
+    animation: spin 1.2s linear infinite;
+    margin: 0 10px 0 0;
+    transition: all 2000ms ease-in-out;
+    transform: translateX(0%);
+  }
+}
+
+.hover_light {
+  &:hover {
+    background-color: $darkColor !important;
+    p {
+      color: $lightColor !important;
+    }
+  }
+}
+.hover {
+  &:hover {
+    background-color: $lightColor !important;
+    border: solid 1px $darkColor !important;
+    p {
+      color: $darkColor !important;
+    }
+  }
+}
+
+.buttonContainer:active {
+  transform: scale(0.9);
+}

@@ -1,0 +1,25 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+p,
+span,
+div,
+h1,
+h2,
+h3,
+h4,
+h6,
+h5,
+ul,
+li,
+label {
+  font-family: "Nunito", sans-serif;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
